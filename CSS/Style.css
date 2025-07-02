@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --white: #fff;
+    --blueHover: #5E7E9E;
+    --blueStrong: #3B8ECB;
+    --fundo1: linear-gradient(to right, #424242, #212121); 
+    --fundo2: linear-gradient(to right, #455a64, #37474f);
+}
+
+body {
+    background: var(--fundo1);
+    height: 100vh;
+    font-family: 'Lato';
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: .8rem;
+    min-height: 50px;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: var(--white);
+    transition: transform 0.3s linear; 
+}
+
+.nav-links:hover {
+    color: var(--blueHover);
+    transform: scale(1.1);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section {
+    padding: 4rem;
+}
+
+.first-section {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2 rem;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 650px;
+}
+
+.first-section > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 300px;
+}
+
+h1 {
+    font-size: 4rem;
+    color: var(--white);
+    letter-spacing: 6px;
+}
+
+strong {
+    color: var(--blueStrong);
+}
+
+.first-section p {
+    color: var(--white);
+}
+
+.btn-action {
+    padding: .6rem;
+    font-size: .9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .4s;
+    text-decoration: none;
+    width: 150px;
+    text-align: center;
+    color: var(--white);
+    background-color: transparent;
+    border: 1px solid var(--white);
+}
+
+.btn-action:hover {
+    background-color: var(--blueHover);
+    border: 1px solid red;
+    color: red;
+}
+
+.box-img-main {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    
+}
+
+.img-profile {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+}
