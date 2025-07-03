@@ -192,3 +192,44 @@ strong {
     display: flex;
     justify-content: center;
 }
+
+footer{
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+footer > div {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+footer .title {
+    color: var(--blueStrong);
+    letter-spacing: 5px;
+}
+
+#my-projects-list{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#my-projects-list a{
+    text-decoration: none;
+    color: var(--white);
+    transition: transform 0.3s linear; 
+}
+
+#my-projects-list a:hover{
+    letter-spacing: 2px;
+    transform: scale(1.1);
+    cursor: default;
+}
