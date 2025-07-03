@@ -27,6 +27,7 @@ header {
     flex-wrap: wrap;
     padding: .8rem;
     min-height: 50px;
+    border-bottom: .4px solid var(--white);
 }
 
 nav {
@@ -77,7 +78,7 @@ section {
 h1 {
     font-size: 4rem;
     color: var(--white);
-    letter-spacing: 6px;
+    letter-spacing: 5px;
 }
 
 strong {
@@ -104,21 +105,90 @@ strong {
 
 .btn-action:hover {
     background-color: var(--blueHover);
-    border: 1px solid red;
-    color: red;
 }
 
 .box-img-main {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    overflow: hidden;
-    
+    overflow: hidden; 
 }
 
 .img-profile {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: center 25%;
+    object-position: center 75%;
+}
+
+:is(.second-section, .five-section) {
+    border-bottom: .4px solid var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.second-section ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.second-section ul li {
+    color: var(--white);
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: transform 0.3s linear; 
+}
+
+.second-section ul li:hover {
+    color: var(--white);
+    letter-spacing: 2px;
+    font-weight: bold;
+    transform: scale(1.1);
+    cursor: default;
+}
+
+:is(.second-section .title, .five-section .title) {
+    border-top: .4px solid var(--white);
+    padding-top: 48px;
+    color: var(--blueStrong);
+    letter-spacing: 5px;
+}
+
+.third-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.third-section > div{
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.third-section > div img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+.third-section > div p {
+    max-width: 600px;
+    color: var(--white);
+    text-align: justify;
+}
+
+.third-section .title {
+    color: var(--blueStrong);
+    letter-spacing: 5px;
+    display: flex;
+    justify-content: center;
 }
