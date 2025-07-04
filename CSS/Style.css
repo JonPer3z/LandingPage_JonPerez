@@ -115,7 +115,7 @@ strong {
     position: relative;
 }
 
-.carousel-inner-wrapper {
+.carrossel-inner-wrapper {
     display: flex; 
     height: 100%; 
     transition: transform 0.9s ease-in-out;

@@ -41,8 +41,8 @@ function getProjetcs() {
 let currentProfileIndex = 0;
 
 function carrosel() {
-    const profileCarouselWrapper = document.getElementById('carousel-wrapper');
-    const profileImages = document.querySelectorAll('#carousel-wrapper img');
+    const profileCarrosselWrapper = document.getElementById('carrossel-wrapper');
+    const profileImages = document.querySelectorAll('#carrossel-wrapper img');
 
     const totalProfileImages = profileImages.length
 
@@ -51,22 +51,22 @@ function carrosel() {
         currentProfileIndex = 0;
     }
 
-    profileCarouselWrapper.style.transform = `translateX(${-currentProfileIndex * 100}%)`;
+    profileCarrosselWrapper.style.transform = `translateX(${-currentProfileIndex * 100}%)`;
 }
 
-function setupCarousel() {
-    const profileImages = document.querySelectorAll('#carousel-wrapper img');
-    const profileCarouselWrapper = document.getElementById('carousel-wrapper');
+function setupCarrossel() {
+    const profileImages = document.querySelectorAll('#carrossel-wrapper img');
+    const profileCarrosselWrapper = document.getElementById('carrossel-wrapper');
 
-    if (profileCarouselWrapper) { 
-        profileCarouselWrapper.style.transform = 'translateX(0)';
+    if (profileCarrosselWrapper) { 
+        profileCarrosselWrapper.style.transform = 'translateX(0)';
 
-        profileCarouselWrapper.style.display = 'flex'; 
+        profileCarrosselWrapper.style.display = 'flex'; 
     }
 
     if (profileImages.length > 1) {
         
-        setInterval(carrosel, 10000); 
+        setInterval(carrosel, 3000); 
     } else {
         console.log("Carrossel não iniciado: menos de 2 imagens de perfil.");
     }
@@ -74,5 +74,5 @@ function setupCarousel() {
 
 document.addEventListener('DOMContentLoaded', () => {
     getProjetcs(); 
-    setupCarousel();
+    setupCarrossel();
 });
