@@ -38,41 +38,47 @@ function getProjetcs() {
         });
 }
 
-let currentProfileIndex = 0;
+function initCarrossel({ wrapperId, intervalo }) {
+    const carrosselWrapper = document.getElementById(wrapperId);
+    const imagens = carrosselWrapper.querySelectorAll('img');
+    let currentIndex = 0;
 
-function carrosel() {
-    const profileCarrosselWrapper = document.getElementById('carrossel-wrapper');
-    const profileImages = document.querySelectorAll('#carrossel-wrapper img');
-
-    const totalProfileImages = profileImages.length
-
-    currentProfileIndex++; 
-    if (currentProfileIndex >= totalProfileImages) {
-        currentProfileIndex = 0;
+    function trocarImagem() {
+        currentIndex++;
+        if (currentIndex >= imagens.length) {
+            currentIndex = 0;
+        }
+        carrosselWrapper.style.transform = `translateX(${-currentIndex * 100}%)`;
     }
 
-    profileCarrosselWrapper.style.transform = `translateX(${-currentProfileIndex * 100}%)`;
-}
-
-function setupCarrossel() {
-    const profileImages = document.querySelectorAll('#carrossel-wrapper img');
-    const profileCarrosselWrapper = document.getElementById('carrossel-wrapper');
-
-    if (profileCarrosselWrapper) { 
-        profileCarrosselWrapper.style.transform = 'translateX(0)';
-
-        profileCarrosselWrapper.style.display = 'flex'; 
-    }
-
-    if (profileImages.length > 1) {
-        
-        setInterval(carrosel, 3000); 
+    if (imagens.length > 1) {
+        carrosselWrapper.style.transform = 'translateX(0)';
+        setInterval(trocarImagem, intervalo);
     } else {
-        console.log("Carrossel não iniciado: menos de 2 imagens de perfil.");
+        console.log(`Carrossel '${wrapperId}' não iniciado: menos de 2 imagens.`);
     }
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
-    getProjetcs(); 
-    setupCarrossel();
+    getProjetcs();
+
+    initCarrossel({
+        wrapperId: 'carrossel-wrapper',
+        intervalo: 10000
+    });
+
+    initCarrossel({
+        wrapperId: 'carrossel-wrapper2',
+        intervalo: 8000
+    });
+
+        initCarrossel({
+        wrapperId: 'carrossel-wrapper3',
+        intervalo: 8000
+    });
+        initCarrossel({
+        wrapperId: 'carrossel-wrapper4',
+        intervalo: 8000
+    });
 });
