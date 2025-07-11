@@ -74,29 +74,7 @@ function initCarrossel({ wrapperId, intervalo }) {
     }
 }
 
-
-document.addEventListener('DOMContentLoaded', () => {
-    getProjetcs();
-    initCarrossel({
-        wrapperId: 'carrossel-wrapper',
-        intervalo: 6000
-    });
-
-    initCarrossel({
-        wrapperId: 'etec-inner-wrapper',
-        intervalo: 8000
-    });
-
-    initCarrossel({
-        wrapperId: 'unicep-inner-wrapper',
-        intervalo: 8000
-    });
-
-    initCarrossel({
-        wrapperId: 'senai-inner-wrapper',
-        intervalo: 8000
-    });
-
+function initAcademicCarousel() {
     const academicCarouselContainer = document.getElementById('academic-main-carousel');
 
     if (academicCarouselContainer) {
@@ -158,4 +136,30 @@ document.addEventListener('DOMContentLoaded', () => {
             window.addEventListener('resize', updateAcademicCarousel);
         }
     }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    getProjetcs();
+    initCarrossel({
+        wrapperId: 'carrossel-wrapper',
+        intervalo: 6000
+    });
+
+    initCarrossel({
+        wrapperId: 'etec-inner-wrapper',
+        intervalo: 8000
+    });
+
+    initCarrossel({
+        wrapperId: 'unicep-inner-wrapper',
+        intervalo: 8000
+    });
+
+    initCarrossel({
+        wrapperId: 'senai-inner-wrapper',
+        intervalo: 8000
+    });
+
+    initAcademicCarousel();
 });
